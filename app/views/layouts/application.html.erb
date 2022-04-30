@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <!-- Imports -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <!-- End of Imports -->
   </head>
-
+  <!---->
   <body>
-    <%= yield %>
+    <!-- Navigation Menu -->
+    <div class="ui small inverted menu">
+      <div class="ui container">
+        <%= render 'layouts/navigation' %>
+      </div>
+    </div>
+    <!-- End of Navigation Menu -->
+    <div class="ui container">
+      <%= yield %>
+    </div>
   </body>
 </html>
